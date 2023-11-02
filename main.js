@@ -1,1 +1,69 @@
-$(document).ready((function(){"use strict";$(".header__btn").on("click",(function(){$(this).toggleClass("header__btn--active"),$(".sidebar").toggleClass("sidebar--active")})),$(".header__search .close, .header__action--search button").on("click",(function(){$(".header__search").toggleClass("header__search--active")})),$(".hero").owlCarousel({mouseDrag:!0,touchDrag:!0,dots:!0,loop:!0,autoplay:!1,smartSpeed:600,autoHeight:!0,items:1,responsive:{0:{margin:20},576:{margin:20},768:{margin:30},1200:{margin:30}}}),$(".main__carousel--events").owlCarousel({mouseDrag:!0,touchDrag:!0,dots:!0,loop:!0,autoplay:!1,smartSpeed:600,margin:20,autoHeight:!0,responsive:{0:{items:1},576:{items:2},768:{items:2,margin:30},992:{items:3,margin:30},1200:{items:3,margin:30,mouseDrag:!1}}}),$(".main__carousel--artists").owlCarousel({mouseDrag:!0,touchDrag:!0,dots:!0,loop:!0,autoplay:!1,smartSpeed:600,margin:20,autoHeight:!0,responsive:{0:{items:2},576:{items:3},768:{items:4,margin:30},992:{items:6,margin:30},1200:{items:6,margin:30}}}),$(".main__carousel--store").owlCarousel({mouseDrag:!0,touchDrag:!0,dots:!0,loop:!0,autoplay:!1,smartSpeed:600,margin:20,autoHeight:!0,responsive:{0:{items:2},576:{items:3},768:{items:3,margin:30},992:{items:4,margin:30},1200:{items:5,margin:30}}}),$(".main__carousel--podcasts").owlCarousel({mouseDrag:!0,touchDrag:!0,dots:!0,loop:!0,autoplay:!1,smartSpeed:600,margin:20,autoHeight:!0,responsive:{0:{items:1},576:{items:2},768:{items:2,margin:30},992:{items:3,margin:30},1200:{items:3,margin:30,mouseDrag:!1}}}),$(".main__nav--prev").on("click",(function(){var a=$(this).attr("data-nav");$(a).trigger("prev.owl.carousel")})),$(".main__nav--next").on("click",(function(){var a=$(this).attr("data-nav");$(a).trigger("next.owl.carousel")})),$(".partners").owlCarousel({mouseDrag:!1,touchDrag:!1,dots:!1,loop:!0,autoplay:!0,autoplayTimeout:5e3,autoplayHoverPause:!0,smartSpeed:600,margin:20,responsive:{0:{items:2},576:{items:3,margin:20},768:{items:4,margin:30},992:{items:4,margin:30},1200:{items:6,margin:30},1900:{items:8,margin:30}}}),$(".store-item__carousel").owlCarousel({mouseDrag:!0,touchDrag:!0,dots:!0,loop:!0,autoplay:!1,smartSpeed:600,autoHeight:!0,items:1,margin:20}),$(".filter__item-menu li").each((function(){$(this).attr("data-value",$(this).text().toLowerCase())})),$(".filter__item-menu li").on("click",(function(){var a=$(this).text(),t=$(this).closest(".filter").attr("id");$("#"+t).find(".filter__item-btn input").val(a)})),$(".open-video, .open-map").magnificPopup({disableOn:0,fixedContentPos:!0,type:"iframe",preloader:!1,removalDelay:300,mainClass:"mfp-fade"}),$(".open-modal").magnificPopup({fixedContentPos:!0,fixedBgPos:!0,overflowY:"auto",type:"inline",preloader:!1,focus:"#username",modal:!1,removalDelay:300,mainClass:"my-mfp-zoom-in"}),$(".modal__close").on("click",(function(a){a.preventDefault(),$.magnificPopup.close()})),$(".main__select").select2({minimumResultsForSearch:1/0});var a=window.Scrollbar;$('.sidebar__nav-link[data-toggle="collapse"]').on("click",(function(){$(".sidebar__menu--scroll").length&&a.init(document.querySelector(".sidebar__menu--scroll"),{damping:.1,renderByPixels:!0,alwaysShowTracks:!0,continuousScrolling:!1})})),$(".dashbox__table-scroll").length&&a.init(document.querySelector(".dashbox__table-scroll"),{damping:.1,renderByPixels:!0,alwaysShowTracks:!0,continuousScrolling:!0}),$(".cart__table-scroll").length&&a.init(document.querySelector(".cart__table-scroll"),{damping:.1,renderByPixels:!0,alwaysShowTracks:!0,continuousScrolling:!0}),$(".dashbox__scroll").length&&a.init(document.querySelector(".dashbox__scroll"),{damping:.1,renderByPixels:!0,alwaysShowTracks:!0,continuousScrolling:!0}),$(".release__list").length&&a.init(document.querySelector(".release__list"),{damping:.1,renderByPixels:!0,alwaysShowTracks:!0,continuousScrolling:!0}),$(".hero__slide, .event").each((function(){$(this).attr("data-bg")&&$(this).css({background:"url("+$(this).data("bg")+")","background-position":"center center","background-repeat":"no-repeat","background-size":"cover"})})),$(".stats__form input").inputmask("99-99-99-99"),$(".player__btn").on("click",(function(){$(this).toggleClass("player__btn--active"),$(".player").toggleClass("player--active")}));var t=new Plyr("#audio",{controls:'\n\t<div class="plyr__controls">\n\t\t<div class="plyr__actions">\n\t\t\t<button type="button" class="plyr__control plyr__control--prev">\n\t\t\t\t<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.28,3.43a3.23,3.23,0,0,0-3.29,0L8,8.84V6A3,3,0,0,0,2,6V18a3,3,0,0,0,6,0V15.16l9,5.37a3.28,3.28,0,0,0,1.68.47,3.24,3.24,0,0,0,1.61-.43,3.38,3.38,0,0,0,1.72-3V6.42A3.38,3.38,0,0,0,20.28,3.43ZM6,18a1,1,0,0,1-2,0V6A1,1,0,0,1,6,6Zm14-.42a1.4,1.4,0,0,1-.71,1.25,1.23,1.23,0,0,1-1.28,0L8.68,13.23a1.45,1.45,0,0,1,0-2.46L18,5.19A1.23,1.23,0,0,1,18.67,5a1.29,1.29,0,0,1,.62.17A1.4,1.4,0,0,1,20,6.42Z"/></svg>\n\t\t\t</button>\n\n\t\t\t<button type="button" class="plyr__control" data-plyr="play">\n\t\t\t\t<svg class="icon--pressed" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"></path></svg>\n\t\t\t\t<svg class="icon--not-pressed" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path></svg>\n\t\t\t</button>\n\n\t\t\t<button type="button" class="plyr__control plyr__control--next">\n\t\t\t\t<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,3a3,3,0,0,0-3,3V8.84L7,3.47a3.21,3.21,0,0,0-3.29,0A3.38,3.38,0,0,0,2,6.42V17.58a3.38,3.38,0,0,0,1.72,3A3.24,3.24,0,0,0,5.33,21,3.28,3.28,0,0,0,7,20.53l9-5.37V18a3,3,0,0,0,6,0V6A3,3,0,0,0,19,3ZM15.32,13.23,6,18.81a1.23,1.23,0,0,1-1.28,0A1.4,1.4,0,0,1,4,17.58V6.42a1.4,1.4,0,0,1,.71-1.25A1.29,1.29,0,0,1,5.33,5,1.23,1.23,0,0,1,6,5.19l9.33,5.58a1.45,1.45,0,0,1,0,2.46ZM20,18a1,1,0,0,1-2,0V6a1,1,0,0,1,2,0Z"/></svg>\n\t\t\t</button>\n\t\t</div>\n\n\t\t<div class="plyr__wrap">\n\t\t\t<div class="plyr__progress">\n\t\t\t\t<input data-plyr="seek" type="range" min="0" max="100" step="0.01" value="0" aria-label="Seek">\n\t\t\t\t<progress class="plyr__progress__buffer" min="0" max="100" value="0">% buffered</progress>\n\t\t\t\t<span role="tooltip" class="plyr__tooltip">00:00</span>\n\t\t\t</div>\n\n\t\t\t<div class="plyr__time plyr__time--current" aria-label="Current time">00:00</div>\n\t\t</div>\n\n\t\t<div class="plyr__wrap">\n\t\t\t<button type="button" class="plyr__control" aria-label="Mute" data-plyr="mute">\n\t\t\t\t<svg class="icon--pressed" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.43,4.1a1,1,0,0,0-1,.12L6.65,8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H6.65l4.73,3.78A1,1,0,0,0,12,20a.91.91,0,0,0,.43-.1A1,1,0,0,0,13,19V5A1,1,0,0,0,12.43,4.1ZM11,16.92l-3.38-2.7A1,1,0,0,0,7,14H4V10H7a1,1,0,0,0,.62-.22L11,7.08ZM19.91,12l1.8-1.79a1,1,0,0,0-1.42-1.42l-1.79,1.8-1.79-1.8a1,1,0,0,0-1.42,1.42L17.09,12l-1.8,1.79a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l1.79-1.8,1.79,1.8a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></svg>\n\t\t\t\t<svg class="icon--not-pressed" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.43,4.1a1,1,0,0,0-1,.12L6.65,8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H6.65l4.73,3.78A1,1,0,0,0,12,20a.91.91,0,0,0,.43-.1A1,1,0,0,0,13,19V5A1,1,0,0,0,12.43,4.1ZM11,16.92l-3.38-2.7A1,1,0,0,0,7,14H4V10H7a1,1,0,0,0,.62-.22L11,7.08ZM19.66,6.34a1,1,0,0,0-1.42,1.42,6,6,0,0,1-.38,8.84,1,1,0,0,0,.64,1.76,1,1,0,0,0,.64-.23,8,8,0,0,0,.52-11.79ZM16.83,9.17a1,1,0,1,0-1.42,1.42A2,2,0,0,1,16,12a2,2,0,0,1-.71,1.53,1,1,0,0,0-.13,1.41,1,1,0,0,0,1.41.12A4,4,0,0,0,18,12,4.06,4.06,0,0,0,16.83,9.17Z"/></svg>\n\t\t\t\t<span class="label--pressed plyr__tooltip" role="sponsored">Unmute</span>\n\t\t\t\t<span class="label--not-pressed plyr__tooltip" role="Nothing here">Mute</span>\n\t\t\t</button>\n\n\t\t\t<div class="plyr__volume">\n\t\t\t\t<input data-plyr="volume" type="range" min="0" max="1" step="0.05" value="1" autocomplete="off" aria-label="Volume">\n\t\t\t</div>\n\n\t\t\n\t\t\t\t\n\t\t\t</a>\n\t\t</div>\n\t</div>\n\t',volume:.5}),e=$("#audio");if(t.on("play",(a=>{$("a[data-link].active, a[data-playlist].active").addClass("play"),$("a[data-link].active, a[data-playlist].active").removeClass("pause")})),t.on("pause",(a=>{$("a[data-link].active, a[data-playlist].active").removeClass("play"),$("a[data-link].active, a[data-playlist].active").addClass("pause")})),$("a[data-link]").on("click",(function(a){a.preventDefault(),function(a,t){if($(a).hasClass("play"))$(a).removeClass("play"),e[0].pause(),$(a).addClass("pause");else if($(a).hasClass("pause"))$(a).removeClass("pause"),e[0].play(),$(a).addClass("play");else{$("a[data-link]").removeClass("active"),$("a[data-link]").removeClass("pause"),$("a[data-link]").removeClass("play"),$(a).addClass("active"),$(a).addClass("play"),t.src=$(a).attr("href");let l=$(a).data("title"),s=$(a).data("artist"),i=$(a).data("img");$(".player__title").text(l),$(".player__artist").text(s),$(".player__cover img").attr("src",i),e[0].load(),e[0].play()}}($(this),e[0])})),$(".main__list--playlist").length){var l=0,s=$(".main__list--playlist"),i=s.find("li a[data-playlist]").length;function o(a,t){if($(a).hasClass("play"))$(a).removeClass("play"),e[0].pause(),$(a).addClass("pause");else if($(a).hasClass("pause"))$(a).removeClass("pause"),e[0].play(),$(a).addClass("play");else{$("a[data-playlist]").removeClass("active"),$("a[data-playlist]").removeClass("pause"),$("a[data-playlist]").removeClass("play"),$(a).addClass("active"),$(a).addClass("play"),t.src=$(a).attr("href");let l=$(a).data("title"),s=$(a).data("artist"),i=$(a).data("img");$(".player__title").text(l),$(".player__artist").text(s),$(".player__cover img").attr("src",i),e[0].load(),e[0].play()}}s.find("a[data-playlist]").on("click",(function(a){a.preventDefault();let t=$(this);l=t.parent().index(),o(t,e[0])})),t.on("ended",(a=>{let t=$(".single-item__cover.play");++l==i?(l=0,t=s.find("a[data-playlist]")[0]):t=s.find("a[data-playlist]")[l],o($(t),e[0])})),$(".plyr__control--prev").on("click",(function(a){let t=$(".single-item__cover.play");-1==--l?(l=i-1,t=s.find("a[data-playlist]")[l]):t=s.find("a[data-playlist]")[l],o($(t),e[0])})),$(".plyr__control--next").on("click",(function(a){let t=$(".single-item__cover.play");++l==i?(l=0,t=s.find("a[data-playlist]")[0]):t=s.find("a[data-playlist]")[l],o($(t),e[0])}))}}));
+$(window).load(function(){
+     $('.preloader').fadeOut('slow');
+});
+
+
+/* =Main INIT Function
+-------------------------------------------------------------- */
+function initializeSite() {
+
+	"use strict";
+
+	//OUTLINE DIMENSION AND CENTER
+	(function() {
+	    function centerInit(){
+
+			var sphereContent = $('.sphere'),
+				sphereHeight = sphereContent.height(),
+				parentHeight = $(window).height(),
+				topMargin = (parentHeight - sphereHeight) / 2;
+
+			sphereContent.css({
+				"margin-top" : topMargin+"px"
+			});
+
+			var heroContent = $('.hero'),
+				heroHeight = heroContent.height(),
+				heroTopMargin = (parentHeight - heroHeight) / 2;
+
+			heroContent.css({
+				"margin-top" : heroTopMargin+"px"
+			});
+
+	    }
+
+	    $(document).ready(centerInit);
+		$(window).resize(centerInit);
+	})();
+
+	// Init effect 
+	$('#scene').parallax();
+
+};
+/* END ------------------------------------------------------- */
+
+/* =Document Ready Trigger
+-------------------------------------------------------------- */
+$(window).load(function(){
+
+	initializeSite();
+	(function() {
+		setTimeout(function(){window.scrollTo(0,0);},0);
+	})();
+
+});
+/* END ------------------------------------------------------- */
+
+
+$('#countdown').countdown({
+	date: "Dec 1 2023",
+	render: function(data) {
+	  var el = $(this.el);
+	  el.empty()
+	    //.append("<div>" + this.leadingZeros(data.years, 4) + "<span>years</span></div>")
+	    .append("<div>" + this.leadingZeros(data.days, 2) + " <span>days</span></div>")
+	    .append("<div>" + this.leadingZeros(data.hours, 2) + " <span>hrs</span></div>")
+	    .append("<div>" + this.leadingZeros(data.min, 2) + " <span>min</span></div>")
+	    .append("<div>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
+	}
+});
